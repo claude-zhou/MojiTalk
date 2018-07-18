@@ -27,14 +27,14 @@ For terms of use, see http://www.unicode.org/terms_of_use.html
 
 2. Base model:
 	1. Set the ```is_seq2seq``` variable in the ```cvae_run.py``` to ```True```
-	2. Train, test and generate: ```CUDA_VISIBLE_DEVICES=0 python3 cvae_run.py```
+	2. Train, test and generate: ```python3 cvae_run.py```
 
 		This will save several breakpoints, a log file and generation output in ```mojitalk_data/seq2seq/<timestamp>/```
 	
 3. CVAE model:
 	1. Set the ```is_seq2seq``` variable in the ```cvae_run.py``` to ```False```
 	2. Set path of pretrain model: Modify line 67 of ```cvae_run.py``` to load a previously trained base model. e.g.: ```saver.restore(sess, "seq2seq/07-17_05-49-50/breakpoints/at_step_18000.ckpt")``` 
-	3. Train, test and generate: ```CUDA_VISIBLE_DEVICES=1 python3 cvae_run.py```
+	3. Train, test and generate: ```python3 cvae_run.py```
 	
 		This will save several breakpoints, a log file and generation output in ```mojitalk_data/cvae/<timestamp>/```.
 	
@@ -46,6 +46,6 @@ For terms of use, see http://www.unicode.org/terms_of_use.html
 		The trained model will be saved in ```mojitalk_data/classifier/<timestamp>/breakpoints``` as a tensorflow breakpoint.
 	
 	2. Set path of pretrain model: Modify line 63/74 of ```rl_run.py``` to load a previously trained CVAE model and the classifier.
-	3. Train, test and generate: ```CUDA_VISIBLE_DEVICES=1 python3 rl_run.py```
+	3. Train, test and generate: ```python3 rl_run.py```
 	
 		This will save several breakpoints, a log file and generation output in ```mojitalk_data/cvae/<timestamp>/```.
