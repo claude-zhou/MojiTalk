@@ -21,7 +21,9 @@ For terms of use, see http://www.unicode.org/terms_of_use.html
 	
 	Set up an environment according to the dependencies.
 
-	Unzip ```mojitalk_data.zip``` to the current path. This will create ```mojitalk_data``` directory where **our dataset** is stored. Read the ```readme.txt``` in it for the format of the dataset.
+	Dataset: https://drive.google.com/file/d/1l0fAfxvoNZRviAMVLecPZvFZ0Qexr7yU/view?usp=sharing
+	
+	Unzip ```mojitalk_data.zip``` to the current path. Create ```mojitalk_data``` directory where our dataset is stored. Read the ```readme.txt``` in it for the format of the dataset.
 
 2. Base model:
 	1. Set the ```is_seq2seq``` variable in the ```cvae_run.py``` to ```True```
